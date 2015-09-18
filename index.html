@@ -1,29 +1,25 @@
-<html>
+<html ng-app="socializeApp">
 <head>
-	<title></title>
+	<title>Socialize-App</title>
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
-
-    <div class="menu">
+    <div class="menu" ng-controller="homeController">
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">What's New</a></li>
-            <li><a href="">Popular</a></li>
-            <li><a href="">Activity</a></li>
-            <li><a href="">Chat</a></li>
-            <li><a href="">Around Me</a></li>
-            <li><a href="">Help Center</a></li>
-            <li><a href="">Logout</a></li>
+            <li ng-repeat="item in menuItems"><a href="#{{ item.route }}">{{ item.name }}</a></li>
         </ul>
     </div>
     <div class="content">
         <div class="button"></div>
+        <h1>Test...</h1>
     </div>
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="menu.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
