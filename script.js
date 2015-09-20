@@ -1,17 +1,46 @@
-var socializeApp = angular.module('socializeApp', []);
+var socializeApp = angular.module('socializeApp', ['ngRoute']);
 
-socializeApp.controller('homeController', ['$scope', function ($scope) {
+socializeApp.config(function ($routeProvider) {
+
+    $routeProvider
+        .when('/', {
+            templateUrl: 'pages/home.html',
+            controller: 'homeController'
+        })
+
+        .when('/instagram', {
+            templateUrl: 'pages/instagram.html',
+            controller: 'instagramController'
+        });
+
+});
+
+socializeApp.controller('navigationController', ['$scope', function ($scope) {
     "use strict";
 
     $scope.menuItems = [
         {
-            route: '#home',
+            route: '/',
             name: 'Home'
         },
         {
-            rout: '#instagram',
+            route: '/instagram',
             name: 'Instagram'
         }
     ];
+
+}]);
+
+socializeApp.controller('homeController', ['$scope', function ($scope) {
+    "use strict";
+
+
+
+}]);
+
+socializeApp.controller('instagramController', ['$scope', function ($scope) {
+    "use strict";
+
+
 
 }]);

@@ -48,7 +48,6 @@ jQuery(document).ready(function ($) {
     });
 
     $('li a').on(click, function (e) {
-        e.preventDefault();
         closeMenu();
     });
 });

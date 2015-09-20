@@ -38,7 +38,7 @@ div.menu {
 }
 
 div.menu ul { 
-    width: 600px;
+    width: 250px;
     list-style: none; 
     margin: 95px 0px 0px 75px;
 }
@@ -73,7 +73,7 @@ div.content {
     background: #fff;
     position: absolute;
     top: 0px; left: 0px;
-    height: 568px; width: 320px;
+    height: 100%; width: 100%;
 
     -webkit-transition: all 300ms ease-in-out;
        -moz-transition: all 300ms ease-in-out;
@@ -85,10 +85,10 @@ div.content {
 
 div.content.inactive {
     cursor: pointer;
-    -webkit-transform: translate3d(160px, 0px, 0px) scale(0.5);
-       -moz-transform: translate3d(160px, 0px, 0px) scale(0.5);
-        -ms-transform: translate3d(160px, 0px, 0px) scale(0.5);
-            transform: translate3d(160px, 0px, 0px) scale(0.5);
+    -webkit-transform: translate3d(250px, 0px, 0px) scale(0.5);
+       -moz-transform: translate3d(250px, 0px, 0px) scale(0.5);
+        -ms-transform: translate3d(250px, 0px, 0px) scale(0.5);
+            transform: translate3d(250px, 0px, 0px) scale(0.5);
 }
 
 div.button {
