@@ -13,7 +13,7 @@ define([
         $scope.have = [];
 
         $scope.getMore = function() {
-            instagram.fetchPopular(function(data) {
+            instagram.fetchUserPhotos(function(data) {
                 for(var i=0; i<data.length; i++) {
                     if (typeof $scope.have[data[i].id]==="undefined") {
                         $scope.pics.push(data[i]) ;

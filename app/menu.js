@@ -14,7 +14,7 @@ define([
         "use strict";
 
         /*	Reveal Menu */
-        $('div.button').on(click, function () {
+        $('button.navbar-toggle').on(click, function () {
             if (!$('div.content').hasClass('inactive')) {
 
                 // Slide and scale content
