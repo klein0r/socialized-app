@@ -4,7 +4,7 @@ define([
 ], function (app) {
     "use strict";
 
-    app.controller('instagramController', ['$scope', '$interval', '$log', 'instagram', function ($scope, $interval, $log, instagram) {
+    app.controller('instagramController', ['appConfig', '$scope', '$log', 'instagram', function (appConfig, $scope, $log, instagram) {
         "use strict";
 
         $log.debug("Init instagram controller");
@@ -13,11 +13,11 @@ define([
         $scope.have = [];
 
         $scope.getMore = function() {
-            instagram.fetchUserPhotos(function(data) {
-                for(var i=0; i<data.length; i++) {
-                    if (typeof $scope.have[data[i].id]==="undefined") {
-                        $scope.pics.push(data[i]) ;
-                        $scope.have[data[i].id] = "1";
+            instagram.fetchUserPhotos(appConfig.instagramUserId, function(data) {
+                for(var i = 0; i < data.length; i++) {
+                    if (typeof $scope.have[data[i].id] === "undefined") {
+                        $scope.pics.push(data[i]);
+                        $scope.have[data[i].id] = 1;
                     }
                 }
             });

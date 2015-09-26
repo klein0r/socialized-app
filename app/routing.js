@@ -1,9 +1,11 @@
 define([
     'app',
+    'config',
     'controller/navigation',
     'controller/home',
     'controller/instagram',
-    'controller/rss'
+    'controller/rss',
+    'controller/youtube'
 ], function (app) {
     'use strict';
 
@@ -27,6 +29,11 @@ define([
                 .when('/rss', {
                     templateUrl: 'pages/rss.html',
                     controller: 'rssController'
+                })
+
+                .when('/youtube', {
+                    templateUrl: 'pages/youtube.html',
+                    controller: 'youtubeController'
                 });
 
         }

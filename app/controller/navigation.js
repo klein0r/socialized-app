@@ -3,7 +3,7 @@ define([
 ], function (app) {
     "use strict";
 
-    app.controller('navigationController', ['$scope', '$log', function ($scope, $log) {
+    app.controller('navigationController', ['appConfig', '$scope', '$log', function (appConfig, $scope, $log) {
         "use strict";
 
         $log.debug("Init navigation controller");
@@ -20,6 +20,10 @@ define([
             {
                 route: '/rss',
                 name: 'Blog'
+            },
+            {
+                route: '/youtube',
+                name: 'YouTube'
             }
         ];
 

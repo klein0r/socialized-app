@@ -3,11 +3,12 @@ define([
 ], function (app) {
     "use strict";
 
-    app.factory('instagram', ['$http', function($http) {
+    app.factory('instagram', ['$http', 'appConfig', function($http, appConfig) {
         return {
-            fetchUserPhotos: function(callback) {
+            fetchUserPhotos: function(instagramUserId, callback) {
 
-                var endPoint = "https://api.instagram.com/v1/users/1682642124/media/recent/?client_id=642176ece1e7445e99244cec26f4de1f&callback=JSON_CALLBACK";
+                var instagramAppId = appConfig.instagramAppId;
+                var endPoint = "https://api.instagram.com/v1/users/" + instagramUserId + "/media/recent/?client_id=" + instagramAppId + "&callback=JSON_CALLBACK";
 
                 $http.jsonp(endPoint).success(function(response) {
                     callback(response.data);

@@ -1,0 +1,17 @@
+define([
+    'app'
+], function (app) {
+    'use strict';
+
+    console.debug("Initialize config");
+
+    app.constant('appConfig', {
+        instagramAppId: '',
+        instagramUserId: '1682642124',
+
+        feedUrl: 'http://elegant-kochen.de/feed/',
+
+        youtubeApiKey: '',
+        youtubeChannelId: ''
+    });
+});

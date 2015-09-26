@@ -4,15 +4,13 @@ define([
 ], function (app) {
     "use strict";
 
-    app.controller('rssController', ['$scope', '$interval', '$log', 'rss', function ($scope, $interval, $log, rss) {
+    app.controller('rssController', ['appConfig', '$scope', '$log', 'rss', function (appConfig, $scope, $log, rss) {
         "use strict";
 
         $log.debug("Init rss controller");
 
-        $scope.feedSrc = 'http://elegant-kochen.de/feed/';
-
         $scope.getMore = function() {
-            rss.parseFeed($scope.feedSrc).then(function(res){
+            rss.parseFeed(appConfig.feedUrl).then(function(res){
                 $scope.feeds = res.data.responseData.feed.entries;
             });
         };
