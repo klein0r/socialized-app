@@ -3,15 +3,7 @@ require.config({
     paths: {
         'angular': '//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min',
         'angular-route': '//code.angularjs.org/1.4.6/angular-route.min',
-        'jquery': '//code.jquery.com/jquery-latest.min',
-
-        'menu': 'menu',
-
-        'service/instagram': 'service/instagram',
-
-        'controller/navigation': 'controller/navigation',
-        'controller/home': 'controller/home',
-        'controller/instagram': 'controller/instagram'
+        'jquery': '//code.jquery.com/jquery-latest.min'
     },
     shim: {
         'angular': {

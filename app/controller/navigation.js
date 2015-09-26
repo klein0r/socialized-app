@@ -16,6 +16,10 @@ define([
             {
                 route: '/instagram',
                 name: 'Instagram'
+            },
+            {
+                route: '/rss',
+                name: 'Blog'
             }
         ];
 

@@ -2,7 +2,8 @@ define([
     'app',
     'controller/navigation',
     'controller/home',
-    'controller/instagram'
+    'controller/instagram',
+    'controller/rss'
 ], function (app) {
     'use strict';
 
@@ -21,6 +22,11 @@ define([
                 .when('/instagram', {
                     templateUrl: 'pages/instagram.html',
                     controller: 'instagramController'
+                })
+
+                .when('/rss', {
+                    templateUrl: 'pages/rss.html',
+                    controller: 'rssController'
                 });
 
         }
