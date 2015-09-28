@@ -1,11 +1,15 @@
-<div class="row">
-    <div class="col-sm-12 col-md-4 col-lg-3" ng-repeat="p in pics" ng-cloak>
-        <div class="thumbnail">
-            <img ng-src="{{p.images.low_resolution.url}}" alt="{{p.caption.text}}">
-            <div class="caption">
-                <p>{{p.caption.text}}</p>
-                <p><span class="glyphicon glyphicon-heart"> {{p.likes.count}}</span></p>
-                <p><a href="{{p.link}}" class="btn btn-primary" role="button">View</a></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-3" ng-repeat="p in pics" ng-cloak>
+            <div class="thumbnail">
+                <img ng-src="{{p.images.low_resolution.url}}" alt="{{p.caption.text}}">
+                <div class="caption">
+                    <p>{{p.caption.text}}</p>
+                    <p><span class="glyphicon glyphicon-heart"> {{p.likes.count}}</span></p>
+                    <p>
+                        <a href="{{p.link}}" class="btn btn-primary" role="button">View</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
