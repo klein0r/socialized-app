@@ -12,7 +12,7 @@ define([
         $scope.pics = [];
         $scope.have = [];
 
-        $scope.getMore = function() {
+        $scope.getMore = function () {
             instagram.fetchUserPhotos(appConfig.instagramUserId, function(data) {
                 for(var i = 0; i < data.length; i++) {
                     if (typeof $scope.have[data[i].id] === "undefined") {
